@@ -14,6 +14,189 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto&display=swap" rel="stylesheet">
+    <style type="text/css" media="all">
+        /* Box Model Hack */
+
+* {
+
+  box-sizing: border-box;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+    text-align: center;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header{
+    background: white;
+    color: black;
+    margin: 0;
+}
+
+header, nav, .secondOne {
+    display: flex;
+}
+
+header{
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > h5 + h5{
+    margin-left: 5vmin;
+}
+
+main, section{
+    padding: 10%;
+}
+
+main{
+    background-image: url("https://www.wallpapertip.com/wmimgs/13-132200_girl-red-hair-data-src-beauty-salon-images.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+button{
+    background: black;
+    color: white;
+}
+
+.mainBox{
+    background: black;
+    color: white;
+    padding: 5%;
+    margin: 20px 0 0 0;
+    border: 5px groove grey;
+    width: 40%;
+}
+
+.mainBox span{
+    font-size: 2rem;
+}
+
+h1, h2{
+    font-family: 'Aboreto', cursive;
+}
+
+h2{
+    margin: 50px 0 0 0;
+}
+
+.employee{
+    display: flex;
+    width: 90%;
+}
+
+.employee img{
+    max-width: 35%;
+    margin: 0 auto;
+}
+
+.employee img + img{
+    margin-left: 3vmin;
+}
+
+.thirdOne{
+    background: #d0d9d2;
+    display: flex;
+}
+
+.thirdOne article{
+    flex-basis: 45%;
+    margin: 0 auto;
+}
+
+article + article{
+    margin-left: 5vmin;
+}
+
+.offerSection{
+
+    background-image: url('https://i.ibb.co/FwPLjDr/Lead-image-yixuwz.jpg');
+
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: left;
+}
+
+.offerSection h3{
+    max-width: 40%;
+}
+
+.offerSection span{
+    font-size: 3rem;
+}
+
+
+.lookbook{
+    display: flex;
+    margin: 0 auto;
+}
+
+.lookbook div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media all and (max-width:800px){
+    nav{
+        display: none;
+    }
+    
+    main, .offerSection{
+        background-position: center;
+
+    }
+    
+    .employee{
+        margin: 0 auto;
+    }
+    
+    .thirdOne, .secondOne, .lookbook{
+        flex-direction: column;
+    }
+    
+    .thirdOne{
+        padding-left: 2vmax;
+    }
+    
+    .mainBox{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5vmin;
+    }
+    
+    article + article{
+        margin-top: 20px;
+    }
+    
+    .lookbook div{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .lookbook img + img{
+        margin: 10px 0 0 0;
+    }
+}
+    </style>
 </head>
 <body>
     <header>
@@ -103,6 +286,6 @@
             <img src="https://i.ibb.co/r3cFbQT/IMG-20220829-WA0022.jpg" alt="IMG-20220829-WA0022" border="0">
         </div>
     </section>
-    <script src="main.js" type="application/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
