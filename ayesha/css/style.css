@@ -1,58 +1,102 @@
 /* Box Model Hack */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-
-
 /******************************************
 /* BASE STYLES
 /*******************************************/
-
-body {
+body, .employee figure {
     text-align: center;
+    margin: 0;
+    padding: 0;
+    font-style: 140%;
 }
-
-
 /******************************************
 /* LAYOUT
 /*******************************************/
-header{
-    background: white;
+header {
+    background: #EEE2DC;
     color: black;
     margin: 0;
-}
-
-header, nav, .secondOne {
-    display: flex;
-}
-
-header{
+    position: sticky;
+    top: 0px;
+    opacity: 0.8;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 16px;
     align-items: center;
 }
 
-nav > h5 + h5{
+header, nav, .secondOne, .employee, .thirdOne,#about, footer {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Courier;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: goldenrod;
+    background: gray;
+}
+
+nav > a + a {
     margin-left: 5vmin;
 }
 
-main, section{
+.toggleNav {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    flex-flow: column;
+    justify-content: space-around;
+    font-size: 1rem;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 60px;
+}
+
+.toggleNav a {
+    color: white;
+    font-weight: bold;
+}
+
+.toggleNav a:hover {
+    color: goldenrod;
+}
+
+.hamburg {
+    width: 2rem;
+    background: #EEE2DC;
+}
+
+.hidden {
+    display: none;
+}
+
+main, section {
     padding: 10%;
 }
 
-main{
+main {
+    background-color: rgb(246, 231, 227);
     background-image: url("https://www.wallpapertip.com/wmimgs/13-132200_girl-red-hair-data-src-beauty-salon-images.jpg");
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    text-align: left;
 }
 
-button{
+button {
     background: black;
     color: white;
+    border-radius: 5px;
 }
 
-.mainBox{
+.mainBox {
     background: black;
     color: white;
     padding: 5%;
@@ -61,119 +105,259 @@ button{
     width: 40%;
 }
 
-.mainBox span{
+.mainBox span {
+    font-size: 5vmax;
+}
+
+h1, h2 {
+    font-family: cursive;
+}
+
+h2 {
+    margin: 50px 0;
+}
+
+#about {
+    padding: 0;
+    background-image: url('../img/about_small.jpg');
+    background-size: cover;
+    color: white;
+}
+
+#about article {
+    margin-left: 5%;
+    width: 50vw;
+    text-align: left;
+}
+
+h3 {
     font-size: 2rem;
+    font-family: Times New Roman;
 }
 
-h1, h2{
-    font-family: 'Aboreto', cursive;
+aside {
+    writing-mode: vertical-rl;
+    background: rgba(0,0,0,0.7);
+    padding: 1rem;
 }
 
-h2{
-    margin: 50px 0 0 0;
+#about p {
+    font-size: 1.3rem;
 }
 
-.employee{
-    display: flex;
-    width: 90%;
+.secondOne {
+    padding: 5%;
+    justify-content: space-between;
 }
 
-.employee img{
-    max-width: 35%;
-    margin: 0 auto;
+.secondOne article {
+    flex: 1;
 }
 
-.employee img + img{
-    margin-left: 3vmin;
+.thirdOne {
+    background: #E2AFBC;
 }
 
-.thirdOne{
-    background: #d0d9d2;
-    display: flex;
-}
-
-.thirdOne article{
+.thirdOne > article {
     flex-basis: 45%;
     margin: 0 auto;
 }
 
-article + article{
-    margin-left: 5vmin;
+iframe {
+    width: 64vmin;
+    height: 48vmin;
 }
 
-.offerSection{
+.specialists {
+    color: white;
+    background: black;
+    margin: 0;
+    padding-top: 1.3rem;
+}
 
+.employee {
+    margin-top: 0;
+    padding-left: 5%;
+    background: black;
+}
+
+.employee img {
+    width: 30vw;
+}
+
+figcaption {
+    background-color: rgba(256,256,256,0.5);
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#review {
+    text-align: left;
+    background-image: url('../img/review.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-size: 1.3rem;
+    color: white;
+    padding: 10%;
+    border-bottom: 3px groove;
+}
+
+#review p {
+    font-family: Roman;
+    width: 40vw;
+}
+
+.offerSection {
     background-image: url('https://i.ibb.co/FwPLjDr/Lead-image-yixuwz.jpg');
-
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: white;
     text-align: left;
 }
 
-.offerSection h3{
+.offerSection h3 {
     max-width: 40%;
 }
 
-.offerSection span{
+.offerSection span {
     font-size: 3rem;
 }
 
-
-.lookbook{
-    display: flex;
+.ourLookbook{
+    background: rgba(0,0,0,0.8);
     margin: 0 auto;
+    padding: 1rem;
+    color: rgba(256,256,256,1);
 }
 
-.lookbook div{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
+.lookbook {
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 30vw);
+    justify-content: center;
 }
 
+.lookbook div {
+    margin: 0;
+    padding-bottom: 1em;
+    padding-right: 1em;
+}
 
+.lookbook img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.two {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+.three {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    padding-right: 0;
+}
+.four {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+}
+.five {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+.six {
+    grid-row: 2 / 4;
+    grid-column: 3 / 4;
+    padding-right: 0;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 10%;
+    text-align: left;
+    justify-content: space-around;
+}
+footer div{
+    flex: 1;
+    width: 22vw;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+div + div{
+    margin-left: 3vw;
+}
+footer a{
+    color: white;
+    font-size: 1rem;
+    font-family: Sans-Serif;
+}
+footer h3{
+    border-bottom: 2px groove white;
+    width: 25%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+footer img{
+    width: 20vw;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-@media all and (max-width:800px){
-    nav{
+@media all and (max-width:600px) {
+    body {
+        font-size: 100%;
+    }
+    nav {
         display: none;
     }
-    
-    main, .offerSection{
+    main, .offerSection {
         background-position: center;
-
     }
-    
-    .employee{
-        margin: 0 auto;
-    }
-    
-    .thirdOne, .secondOne, .lookbook{
+    .thirdOne, .secondOne,.employee,footer {
         flex-direction: column;
     }
-    
-    .thirdOne{
-        padding-left: 2vmax;
+    .thirdOne {
+        padding: 2vmax;
     }
-    
-    .mainBox{
+    iframe {
+        margin-top: 2vmax;
+    }
+    .mainBox {
         width: 80%;
-        margin: 0 auto;
-        margin-top: 5vmin;
+        margin: 5vmin auto 0 0px;
     }
-    
-    article + article{
-        margin-top: 20px;
-    }
-    
-    .lookbook div{
+    .employee img {
         width: 80%;
-        margin: 0 auto;
+        margin-top: 2vw;
     }
-    
-    .lookbook img + img{
-        margin: 10px 0 0 0;
+    footer *{
+        width: 80vw;
+        text-align: center;
+    }
+    footer h3, footer img{
+        width: 80vw;
+    }
+}
+@media (min-width:601px) {
+    .hamburg {
+        display: none;
+    }
+    .secondOne article + article{
+        margin-left: 2vw;
     }
 }
